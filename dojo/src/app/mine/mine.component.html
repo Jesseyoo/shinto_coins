@@ -1,0 +1,13 @@
+<fieldset>
+    <legend class="title"><h1>{{ title }}</h1></legend>
+    <h3>Earn ShintoCoins by being the first to solve this algorithm</h3>
+    <p><em>You have:</em> {{ coins }} ShintoCoins</p>
+    <br>
+    <p>What is the 7th Fibonnacci sequence number?</p>
+    <form (submit)="mineCoins()">
+        <input type="text" name="answer"> 
+        <button class="btn btn-primary">Mine</button>
+    </form>
+    
+</fieldset>
+ 

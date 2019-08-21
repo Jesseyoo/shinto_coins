@@ -1,0 +1,9 @@
+fieldset {
+    border: 1px solid #6c757d;;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 5px #6c757d;;
+    padding: 20px;
+}
+legend {
+    font-family: "Permanent Marker", cursive;
+}
