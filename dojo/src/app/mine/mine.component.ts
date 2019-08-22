@@ -26,7 +26,7 @@ export class MineComponent implements OnInit {
 
   mineCoins() {
     console.log("mined");
-    this.coins = this._httpService.addToCoins(10);
+    this.coins = this._httpService.addToCoins(this.title, 10);
   }
 
   

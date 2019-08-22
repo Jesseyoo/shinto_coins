@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpService } from '../http.service';
-import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-buy',
@@ -13,8 +11,6 @@ import { Observable } from 'rxjs';
 export class BuyComponent implements OnInit {
   title = "Buy Coins";
   coins : any;
-  currentValue : String = "$1.25";
-  // bought : number;
 
   constructor(private _httpService : HttpService) { }
 
@@ -28,10 +24,9 @@ export class BuyComponent implements OnInit {
     });
   } 
 
-  // buyCoins() {
-  //   let num = this.bought['coins'];
-  //   console.log(`purchased ${num} ShintoCoins`);
-  //   this.coins = this._httpService.addToCoins(num);
-  // }
+  buyCoins() {
+    console.log(`purchased ShintoCoins`);
+    this.coins = this._httpService.addToCoins(this.title, 13);
+  }
 
 }

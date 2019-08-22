@@ -9,15 +9,28 @@ import { HttpClient } from '@angular/common/http';
 
 export class HttpService {
   coins = 10;
-  
+  ledger = [];
+  count : number = 0;
+
   constructor(private _httpClient :  HttpClient) { }
 
   shareCoins(cb) {
     cb(this.coins);
   }
 
-  addToCoins(num) {    
-    return this.coins += num;
+  shareLedger(cb) {
+    cb(this.ledger);
+  }
+
+  addToCoins(actionName, num) {
+    this.coins += num;
+    this.ledger.push({_id: this.count ,action: `${actionName}`, amount: `${num}`, current: `${this.coins}`})
+    this.count += 1;
+    return this.coins;
+  }
+
+  getTrans(_id) {
+    return this.ledger[_id];
   }
 
 }

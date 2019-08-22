@@ -12,6 +12,7 @@ import { BuyComponent } from './buy/buy.component';
 import { SellComponent } from './sell/sell.component';
 import { BrowseComponent } from './browse/browse.component';
 import { HomeComponent } from './home/home.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     BuyComponent,
     SellComponent,
     BrowseComponent,
-    HomeComponent
+    HomeComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule,

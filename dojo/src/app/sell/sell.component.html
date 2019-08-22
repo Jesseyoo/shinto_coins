@@ -1,1 +1,10 @@
-<p>sell works!</p>
+<fieldset>
+    <legend class="title"><h1>{{ title }}</h1></legend>
+    <h3>Sell some ShintoCoins!</h3>
+    <p><em>You have:</em> {{ coins }} ShintoCoins</p>
+    <br>
+    <form (submit)="sellCoins()">
+        <button class="btn btn-primary">Sell</button>
+    </form>
+    
+</fieldset>

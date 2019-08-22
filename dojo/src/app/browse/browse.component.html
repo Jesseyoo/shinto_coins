@@ -1,1 +1,19 @@
-<p>browse works!</p>
+<fieldset>
+    <legend class="title"><h1>{{ title }}</h1></legend>
+    <h3>View your past transactions</h3>
+    <table>
+        <tr>
+            <th>Action</th>
+            <th>Amount</th>
+            <th>Coin Total</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let trans of ledger">
+            <td>{{ trans.action }}</td>
+            <td>{{ trans.amount }}</td>
+            <td>{{ trans.current }}</td>
+            <td><button class="btn btn-secondary btn-sm" [routerLink]="['/transactions/', trans._id]">Details</button></td>
+        </tr>
+    </table>
+    
+</fieldset>

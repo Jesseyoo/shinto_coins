@@ -1,0 +1,12 @@
+<fieldset>
+        <legend class="title"><h1>{{ title }}</h1></legend>
+        <h3>Transaction Details</h3>
+        <h4>Transaction #{{ transaction._id }}</h4>
+        <ul>
+            <li>Action: {{ transaction.action }}</li>
+            <li>Amount: {{ transaction.amount }}</li>
+            <li>New Total: {{ transaction.current }}</li>
+        </ul>
+        <button class="btn btn-primary btn-sm" [routerLink]="['/browse']">Back to all</button>
+        
+    </fieldset>
